@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingestion Firewall</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Enterprise Structured Ingestion Firewall</h1>
+    <p class="muted">
+      Messages are classified by the AI, then validated before they may proceed downstream.
+    </p>
+
+    <form id="form">
+      <textarea id="message" rows="4" maxlength="2000"
+        placeholder="Paste a support or financial message..."></textarea>
+
+      <div class="samples">
+        <button type="button" class="sample">My bank transfer failed. Please help urgently.</button>
+        <button type="button" class="sample">I want to reset my password.</button>
+        <button type="button" class="sample">Someone made an unauthorized transaction on my account.</button>
+        <button type="button" class="sample">What are your business hours?</button>
+      </div>
+
+      <button type="submit" id="submit" class="primary" disabled>Submit</button>
+    </form>
+
+    <p id="error" class="error" hidden></p>
+    <section id="result" class="card" hidden></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
